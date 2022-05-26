@@ -1,12 +1,34 @@
 <template>
+    <!--
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    
+    <localized-link to="/">Home</localized-link> |
+    <localized-link to="/about">About</localized-link>
   </nav>
+ -->
   <router-view/>
+  
 </template>
 
+
+<script>
+import store from './store'
+import { useClient } from 'villus';
+export default {
+  name: 'App',
+  lang: 'en',
+  setup() {
+    useClient({
+      url: store.baseUrl + '/graphql',
+    });
+  },
+};
+
+</script>
+
 <style lang="scss">
+
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -27,4 +49,16 @@ nav {
     }
   }
 }
+
+//Hambutton Global
+.bm-burger-button {
+      width: 18px !important;
+      height: 14px !important;
+      left: 37px !important;
+      top: 46px !important;
+    }
+.bm-burger-bars {
+      background-color: #ffffff !important;
+      border-radius: 25px;
+    }
 </style>

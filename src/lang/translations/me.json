@@ -1,0 +1,30 @@
+{
+	"home": "Početna",
+	"news": "Vijesti",
+	"oldtown": "Stari grad",
+	"curator": "Kustos",
+	"contact": "Kontakt",
+	"old": "Stari",
+	"town": "Grad",
+	"bar": "Bar",
+	"info": "Informacije",
+	"curLang":"me",
+	"nextLang":"en",
+	"apiN": "Naslov",
+	"apiS": "Sadrzaj",
+	"apiT": "Title",
+	"apiAut": "Autor",
+	"newsTitle": "Aktuelni Događaji u Starom Gradu",
+	"newsSubTitle": "Saznajte više o arheološko-istraživačkim projektima na Starom gradu Baru.",
+	"latestNews": "Najnovije vijesti",
+	"readMoreNews": "Pogledaj Sve",
+	"landTitle": {
+		"frs": "Istraži",
+		"sec": "Stari Grad Bar"
+	},
+	"datelang": "sr-Latn-RS", 
+	"hello": "Hello!",
+	"about": {
+		"example": "This is an About page."
+	}
+}
