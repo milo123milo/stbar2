@@ -13,6 +13,7 @@
     "markdown-to-text": "^0.1.1",
     "villus": "^1.0.1",
     "vue": "^3.2.13",
+    "vue-final-modal": "^4.4.5",
     "vue-lang-router": "^2.1.0",
     "vue-router": "^4.0.3",
     "vue3-burger-menu": "^1.1.1",

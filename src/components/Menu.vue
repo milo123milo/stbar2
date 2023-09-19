@@ -15,8 +15,12 @@
       <a id="curator" href="../curator/">
         <span>{{ $t('curator') }}</span>
       </a>
-      <a id="contact" href="../contact/">
+      <a id="contact"  href="../contact/">
         <span>{{ $t('contact') }}</span>
+      </a>
+
+      <a id="thanks" href="../thanks/">
+        <span>{{ $t('zah') }}</span>
       </a>
     </Slide>
     
@@ -46,5 +50,8 @@ export default {
 
    z-index: 4000 !important;
 }
+#thanks {
+  text-align: left;
+  }
 
 </style>
