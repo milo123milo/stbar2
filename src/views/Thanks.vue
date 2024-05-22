@@ -3,12 +3,12 @@
 <div>
     <Menu></Menu>
     <div class="boxer">
-    <div class="zahv" v-if="data" >
+    
        <!-- {{  data.zahvlanice.data.attributes['zahvalnice' + $t('apiZ')]  }} -->
         <keep-alive>
        <Markdown class="zahv" id="textcontent" v-if="data" :source="data.zahvlanice.data.attributes['zahvalnice' + $t('apiZ')]" />
         </keep-alive>
-    </div>
+    
     <img class="logoim" v-if="data" :src="'https://starigradbar.com/strapi' + data.zahvlanice.data.attributes.image.data.attributes.url" alt="">
 </div>
     <div>
