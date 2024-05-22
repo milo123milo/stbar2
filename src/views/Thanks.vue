@@ -4,9 +4,12 @@
     <Menu></Menu>
     <div class="boxer">
     <div class="zahv" v-if="data" >
-        {{  data.zahvlanice.data.attributes['zahvalnice' + $t('apiZ')]  }}
+       <!-- {{  data.zahvlanice.data.attributes['zahvalnice' + $t('apiZ')]  }} -->
+        <keep-alive>
+       <Markdown class="zahv" id="textcontent" v-if="data" :source="data.zahvlanice.data.attributes['zahvalnice' + $t('apiZ')]" />
+        </keep-alive>
     </div>
-    <img v-if="data" :src="'https://starigradbar.com/strapi' + data.zahvlanice.data.attributes.image.data.attributes.url" alt="">
+    <img class="logoim" v-if="data" :src="'https://starigradbar.com/strapi' + data.zahvlanice.data.attributes.image.data.attributes.url" alt="">
 </div>
     <div>
         
@@ -18,6 +21,11 @@
 </template>
 
 <style>
+.logoim {
+  margin-bottom: 30px;
+    margin-top: 30px;
+    width: 300px;
+}
 .zahv {
     width: 80%;
     font-size: 2rem;
@@ -27,6 +35,7 @@
     margin-top: 200px;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 .bm-burger-bars {
   background-color: #092536 !important;
@@ -50,6 +59,7 @@ import Menu from "../components/Menu.vue"
 import { useI18n } from 'vue-i18n'
 import { useQuery } from 'villus';
 import { ref, computed } from 'vue'
+import Markdown from 'vue3-markdown-it';
 
 
 
@@ -57,6 +67,7 @@ export default {
   name: 'thanks',
   components: {
     Menu,
+    Markdown
   }, 
   setup() {
     const { t } = useI18n({});
