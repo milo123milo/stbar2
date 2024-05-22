@@ -6,6 +6,7 @@
     <div class="zahv" v-if="data" >
         {{  data.zahvlanice.data.attributes['zahvalnice' + $t('apiZ')]  }}
     </div>
+    <img v-if="data" src="data.zahvlanice.data.attributes.image.data.attributes.url" alt="">
 </div>
     <div>
         
@@ -70,7 +71,13 @@ export default {
     data {
       attributes {
         ${zahv}, 
-        
+        image {
+          data {
+            attributes {
+              url
+            }
+          }
+        }
       }
     }
   }
