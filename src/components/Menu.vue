@@ -22,6 +22,10 @@
       <a id="thanks" href="../thanks/">
         <span>{{ $t('zah') }}</span>
       </a>
+
+     <a id="oldpic" href="../article/8">
+        <span>{{ $t('oldpic') }}</span>
+      </a>
     </Slide>
     
 </template>
